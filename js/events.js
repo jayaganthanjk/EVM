@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    function fillDiff(){
+    $('ul .event-description:even').css('backgroundColor',"#DAD7D7");
+    $('ul .event-description:odd').css('backgroundColor',"#F2F1F1");
+  }
+
 
   // Setting up for the popover
   $('.popover-with-html').popover({ html : true });
@@ -11,7 +16,9 @@ $(document).ready(function(){
         
       console.log("entered");
       console.log($(this).data('bs.popover'));
-      $(this).data('bs.popover').options.content = "<div class=\"main-img\" style=\""+$(this).attr('style')+";background-repeat:no-repeat;\"></div>";
+      var img_src = $(this).data('src');
+      $(this).data('bs.popover').options.content = "<div class=\"main-img\"><img style=\"width:100%;height:80%;\" src=\"img/"+img_src+"\"></img></div>";
+      console.log($(this).data('bs.popover'));
       $(this).popover("show");
     },
     mouseleave: function () {
@@ -45,6 +52,7 @@ $(document).ready(function(){
     { 
       $('.event-description[data-category="'+category+'"]').css('display',disp_property);
     }
+    //fillDiff();
   });
 
   }
@@ -71,6 +79,7 @@ $(document).ready(function(){
       $('.category[data-category="'+category+'"').prop('checked',check);
 
     }
+    //fillDiff();
 
   });
 

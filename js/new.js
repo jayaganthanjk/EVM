@@ -204,14 +204,14 @@ $(function(){
     $('#description-menu ul').append('<li class="list-group-item" >Description</li>');
     $.each(categories, function(category_key, category_value){
       $('#description-menu ul').append(content_html_start+category_value+"\">"+category_value+content_html_end);
-      $('#description-menu ul li:nth-last-child(1)').last().addClass("text-info text-bold event-description");
+      $('#description-menu ul li:nth-last-child(1)').last().addClass("text-bold event-description");
       $this = $('#description-menu ul');
       temp_sub_categories = findSubCategory(category_value);
       if( temp_sub_categories.length > 0 )
       {
         $.each( temp_sub_categories , function(sub_category_key, sub_category_value){
           $this.append(content_html_start+category_value+'" data-sub-category="'+sub_category_value+'">'+"<em>"+sub_category_value+"</em>"+content_html_end);
-          $('#description-menu ul li:nth-last-child(1)').last().addClass("text-info sub-category-display event-description");
+          $('#description-menu ul li:nth-last-child(1)').last().addClass("sub-category-display event-description");
           //console.log("filling sub category for "+sub_category_value);
           fillSubCategoryDescription(category_value, sub_category_value);
         })
@@ -272,7 +272,8 @@ $(function(){
     $.each( categories , function(category_key,category_value){
       if($('input[data-category="'+category_value+'"]').is(':checked'))
       {
-        image_content_html_end = '<div style="background-image:url(\'img/'+findImageName(category_value,model_name)+'\');background-size:contain;background-repeat:no-repeat;" class="small-img pull-right popover-with-html image" data-container="body" data-trigger="manual" data-toggle="popover" data-placement="left" data-content=""></div></li>';
+        var image_name = findImageName(category_value,model_name);
+        image_content_html_end = '<div data-src="'+image_name+'" style="background-image:url(\'img/'+image_name+'\');background-size:contain;background-repeat:no-repeat;" class="small-img pull-right popover-with-html image" data-container="body" data-trigger="manual" data-toggle="popover" data-placement="left" data-content=""></div></li>';
         $('#'+model_name+' ul').append(content_html_start+category_value+"\" style=\"display:block;\" >"+category_value+image_content_html_end);
       }
       else
@@ -287,14 +288,15 @@ $(function(){
         $.each( temp_sub_categories , function(sub_category_key, sub_category_value){
           if($('input[data-sub-category="'+sub_category_value+'"').is(':checked'))
           {
-            image_content_html_end = '<div style="background-image:url(\'img/'+findImageName(sub_category_value,model_name)+'\');background-size:contain;background-repeat:no-repeat;" class="small-img pull-right popover-with-html image" data-container="body" data-trigger="manual" data-toggle="popover" data-placement="left" data-content=""></div></li>';
+            var image_name = findImageName(sub_category_value,model_name);
+            image_content_html_end = '<div data-src="'+image_name+'" style="background-image:url(\'img/'+image_name+'\');background-size:contain;background-repeat:no-repeat;" class="small-img pull-right popover-with-html image" data-container="body" data-trigger="manual" data-toggle="popover" data-placement="left" data-content=""></div></li>';
             $this.append(content_html_start+category_value+'" data-sub-category="'+sub_category_value+'" style="display:block;">'+"<em>"+sub_category_value+"</em>"+image_content_html_end);
           }
           else
           {
             $this.append(content_html_start+category_value+'" data-sub-category="'+sub_category_value+'">'+"<em>"+sub_category_value+"</em>"+content_html_end);
           }
-          $('#'+model_name+' ul li:nth-last-child(1)').last().addClass("text-info sub-category-display event-description");
+          $('#'+model_name+' ul li:nth-last-child(1)').last().addClass("sub-category-display event-description");
           //console.log("filling sub category for "+sub_category_value);
           fillSubCategoryModelDescription(category_value, sub_category_value, model_name);
         })
@@ -343,6 +345,10 @@ $(function(){
     $(this).parents('.model-display').remove();    
   })
 
+  function fillDifferentiation(){
+    $('ul li:even').css('backgroundColor',"#DAD7D7");
+  }
+
   function init(){
     findCategories();
     findModels();
@@ -351,6 +357,7 @@ $(function(){
     fillModelDescription();
     $('#all-category').click();
     $.material.init();
+    //fillDifferentiation();
     //createModelView();
   }
 

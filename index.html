@@ -19,64 +19,47 @@
 			<div class="navbar-header">
 				<div class="navbar-brand">Entire Vehicle Database</div>
 			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a style="margin-right:20px;">
+					<i class="mdi-navigation-apps" style="font-size:25px;" data-toggle="modal" data-target=".bs-example-modal-sm"></i>
+				</a></li>
+			</ul>
 		</div>
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="well">
-						<form>
-							<fieldset>
-								<div class="form-group">
-									<label>Data File:</label>			
-									<input class="form-control floating-label" type="text" placeholder="Click here to choose file" />			
-									<input type='file' id="input_file" required/>
-									  <p class="help-block">Choose file to extract data from.</p>
-								</div>
-							</fieldset>
-						</form>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="well">
-						<form>
-							<fieldset>
-								<div class="form-group">
-									<label>Image File:</label>			
-									<input class="form-control floating-label" type="text" placeholder="Click here to choose file" />			
-									<input type='file' id="image_file" required/>
-									  <p class="help-block">Choose file to extract images from.</p>
-								</div>
-							</fieldset>
-						</form>	
-					</div>			
-				</div>
-				<div class="col-md-3">
-					<div class="well">
-						<fieldset>
-							<div class="form">
-								<div class="form-group">
-									<select id="model-select" class="form-control" disabled></select>
-								</div>
-								<div class="form-group">
-									<button id="addToCompare" class="btn btn-primary">Compare</button>
-								</div>
-							</div>
-						</fieldset>
-					</div>
-				</div>
-			</div>
 			<div class="row" id="list-view">
 				<div class="col-md-2">
-					<div class="well">
-						<fieldset>
-							<div id="categories-menu">
-								<legend>Categories</legend>
-								<hr class="color-black"/>
-								<div class="checkbox">
-									<label><input type="checkbox" id="all-category"/>All</label>
-								</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="well">
+								<fieldset>
+									<div class="form">
+										<div class="form-group">
+											<select id="model-select" class="form-control" >
+												<option disabled>Choose Model</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<button id="addToCompare" class="btn btn-primary">Compare</button>
+										</div>
+									</div>
+								</fieldset>
 							</div>
-						</fieldset>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="well">
+								<fieldset>
+									<div id="categories-menu">
+										<legend>Categories</legend>
+										<hr class="color-black"/>
+										<div class="checkbox">
+											<label><input type="checkbox" id="all-category"/>All</label>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-md-2" id="description-menu">
@@ -89,6 +72,7 @@
 				</div>
 			</div>
 		</div>
+		<!--
 		<div class="row">
 			<div class="container">
   			<div class="col-md-4">
@@ -96,6 +80,44 @@
   			</div>
 			</div>
 		</div>
+	-->
+	<!-- Small modal -->
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      	<h4>Upload Files</h4>
+      </div>
+      <div class="modal-body">
+				<div class="row">
+					<div class="container-fluid">
+						<form>
+							<fieldset>
+								<div class="form-group">
+									<label>Data File:</label>			
+									<input class="form-control floating-label" type="text" placeholder="Click here to choose file" />			
+									<input type='file' id="input_file" required/>
+									  <p class="help-block">Choose file to extract data from.</p>
+								</div>
+								<div class="form-group">
+									<label>Image File:</label>			
+									<input class="form-control floating-label" type="text" placeholder="Click here to choose file" />			
+									<input type='file' id="image_file" required/>
+									  <p class="help-block">Choose file to extract images from.</p>
+								</div>
+							</fieldset>
+						</form>
+					</div>	
+				</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 		<div class="col-md-3">
 			<span id="back-to-top">
 				<i class="mdi-hardware-keyboard-capslock back-label"></i>
