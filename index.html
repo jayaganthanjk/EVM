@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/material-wfont.css" />
+		<link rel="stylesheet" href="css/ripples.css" />
+		<link rel="stylesheet" href="css/custom.css" />
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/material.min.js"></script>
+		<script src="js/ripples.min.js"></script>
+		<script src="js/jquery-csv.js"></script>
+		<script src="js/new.js"></script>
+		<script src="js/events.js"></script>
+	</head>
+	<body>
+		<div class="background-image"></div>
+		<div class="content">
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="navbar-header">
+				<div class="navbar-brand">Entire Vehicle Database</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="well">
+						<form>
+							<fieldset>
+								<div class="form-group">
+									<label>Data File:</label>			
+									<input class="form-control floating-label" type="text" placeholder="Click here to choose file" />			
+									<input type='file' id="input_file" required/>
+									  <p class="help-block">Choose file to extract data from.</p>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="well">
+						<form>
+							<fieldset>
+								<div class="form-group">
+									<label>Image File:</label>			
+									<input class="form-control floating-label" type="text" placeholder="Click here to choose file" />			
+									<input type='file' id="image_file" required/>
+									  <p class="help-block">Choose file to extract images from.</p>
+								</div>
+							</fieldset>
+						</form>	
+					</div>			
+				</div>
+				<div class="col-md-3">
+					<div class="well">
+						<fieldset>
+							<div class="form">
+								<div class="form-group">
+									<select id="model-select" class="form-control" disabled></select>
+								</div>
+								<div class="form-group">
+									<button id="addToCompare" class="btn btn-primary">Compare</button>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="list-view">
+				<div class="col-md-2">
+					<div class="well">
+						<fieldset>
+							<div id="categories-menu">
+								<legend>Categories</legend>
+								<hr class="color-black"/>
+								<div class="checkbox">
+									<label><input type="checkbox" id="all-category"/>All</label>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="col-md-2" id="description-menu">
+					<ul class="list-group shadow-z-2">
+					</ul>
+				</div>
+				<div class="model-menu">
+					<div class="model-list-view">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="container">
+  			<div class="col-md-4">
+  				<div class="list-group"><div class="list-group-item"><div class="row-action-primary"><i class="mdi-file-folder"></i></div><div class="row-content"><div class="action-secondary"><i class="mdi-material-info"></i></div><h4 class="list-group-item-heading">Tile with an icon</h4><p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p></div></div><div class="list-group-separator"></div><div class="list-group-item"><div class="row-action-primary"><i class="mdi-file-folder"></i></div><div class="row-content"><div class="action-secondary"><i class="mdi-material-info"></i></div><h4 class="list-group-item-heading">Tile with an icon</h4><p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p></div></div><div class="list-group-separator"></div><div class="list-group-item"><div class="row-action-primary"><i class="mdi-file-folder"></i></div><div class="row-content"><div class="action-secondary"><i class="mdi-material-info"></i></div><h4 class="list-group-item-heading">Tile with an icon</h4><p class="list-group-item-text">Maecenas sed diam eget risus varius blandit.</p></div></div><div class="list-group-separator"></div></div>
+  			</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<span id="back-to-top">
+				<i class="mdi-hardware-keyboard-capslock back-label"></i>
+				<label class="back-label-text">Back to Top</label>
+			</span>
+		</div>
+	</div>
+	</body>
+</html>

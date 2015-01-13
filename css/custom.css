@@ -1,0 +1,116 @@
+.sub-category{
+  padding-left:20px;
+}
+.category-list{
+  display:none;
+  text-transform: capitalize;
+}
+.sub-category-description{
+  padding-left: 30px;
+}
+.category-description{
+  padding-left: 25px;
+}
+.sub-category-display{
+  padding-left:20px;
+  text-decoration: underline;
+}
+#description-menu{
+  text-transform: capitalize;
+}
+#categories-menu{
+
+}
+.event-description{
+  display:none;
+}
+body{
+  overflow-x:visible;
+  padding: 0;
+  margin: 0;
+}
+.model-menu{
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+.model-display{
+  width:300px;
+}
+.model-list-view{
+  width:500%;
+}
+.small-img{
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 50%;
+  margin: -10px;
+}
+.main-img{
+  /*background: url('../img/benz.jpeg') no-repeat;*/
+  background-size: contain;
+  width:100%;
+  height:100%;
+}
+.popover{
+    width:250px;
+    height:250px;    
+}
+.model-image{
+width: 150px;
+background-size: contain;
+background-repeat: no-repeat;
+height: 150px;
+/* border-radius: 50%; */
+/* text-align: center; */
+margin: auto;
+}
+.model-image img{
+  width: 100%;
+height: 100%;
+border-radius: 50%;
+border:3px solid #5CB5AC;
+}
+.model-image-li{
+  border: none !important;
+background: #B2AFAF !important;
+float: none !important;
+}
+.back-label{
+  font-size: 35px;
+  float:left;
+}
+.back-label-text{
+  line-height: 35px;
+}
+.color-black{
+  border-top: 1px solid #6C6363 !important;
+}
+.list-group-item:hover{
+  border:none;
+  background-color: #4BB6AC;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22), 0 14px 45px rgba(0, 0, 0, 0.25);
+}
+.list-group-item-active{
+  border:none;
+  background-color: #4BB6AC;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22), 0 14px 45px rgba(0, 0, 0, 0.25);
+}
+.background-image{
+position: fixed;
+background-image: url('../img/back-logo.jpg');
+background-attachment: fixed;
+width: 100%;
+height: 100%;
+background-size: cover;
+z-index: 1;
+-webkit-filter:blur(2px);
+}
+.content{
+  z-index: 2;
+position: absolute;
+overflow-y:visible;
+width: 100%;
+height: 100%;
+}
