@@ -9,6 +9,7 @@
 		<script src="js/material.min.js"></script>
 		<script src="js/ripples.min.js"></script>
 		<script src="js/jquery-csv.js"></script>
+		<script src="js/lib.js"></script>
 		<script src="js/new.js"></script>
 		<script src="js/events.js"></script>
 	</head>
@@ -19,6 +20,15 @@
 			<div class="navbar-header">
 				<div class="navbar-brand">Entire Vehicle Database</div>
 			</div>
+
+			<!-- search form -->
+			<div class="navbar-form navbar-left">
+				<div class="form-group">
+					<input class="form-control" placeholder="Search" type="text" id="search"></input>
+				</div>
+			</div>
+			<!-- search form ends -->
+
 			<ul class="nav navbar-nav navbar-right">
 				<li><a style="margin-right:20px;">
 					<i class="mdi-navigation-apps" style="font-size:25px;" data-toggle="modal" data-target=".bs-example-modal-sm"></i>
@@ -34,8 +44,7 @@
 								<fieldset>
 									<div class="form">
 										<div class="form-group">
-											<select id="model-select" class="form-control" >
-												<option disabled>Choose Model</option>
+											<select id="model-select" class="form-control" disabled>
 											</select>
 										</div>
 										<div class="form-group">
@@ -46,7 +55,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row">						
 						<div class="col-md-12">
 							<div class="well">
 								<fieldset>
@@ -62,12 +71,16 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2" id="description-menu">
-					<ul class="list-group shadow-z-2">
-					</ul>
-				</div>
-				<div class="model-menu">
-					<div class="model-list-view">
+				<div class="row content-wrapper-box">
+					<div class="content-wrapper">
+						<div class="col-md-2" id="description-menu" style="padding-right:4px;width:250px">
+							<ul class="list-group">
+							</ul>
+						</div>
+						<div class="model-menu">
+							<div class="model-list-view">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

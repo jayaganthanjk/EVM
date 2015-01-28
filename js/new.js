@@ -1,24 +1,29 @@
-$(function(){ 
+//$(function(){ 
 
   var file_data;
   var categories = [];
   var model = [];
   var image_data;
 
-  $.material.init();
-  //Image file analysis start
- 
+ function imageData(data)
+ {
+  image_data = data;
+  
+ }
+  
   // Getting image for given category and model name
 
   function findImageName(category, model)
   {
     var return_data;
+
     $.each(image_data, function(key,value){
       if(category == value.Category){
         $.each(value, function(image_key,image_value){
+          
           if(image_key == model)
           {
-            console.log(image_value);
+           // console.log(image_value);
             return_data = image_value;
           }
         })
@@ -26,26 +31,6 @@ $(function(){
     });
     return return_data;
   }
-
-    //Getting data from the file.
-  $('#image_file').on('change', function(){
-    var file = this.files[0];
-
-    var reader = new FileReader();
-    reader.onload = function(progressEvent){
-      // Entire file
-      //console.log(file);
-      image_file_data = this.result;
-      image_data = $.csv.toObjects(image_file_data);
-      console.log(image_data);
-      var image = findImageName("Basic","Model-8965");
-      console.log(image);
-    };
-    console.log(file);
-    reader.readAsText(file);
-  });
-
-
 
   //image file analysis end
 
@@ -141,19 +126,7 @@ $(function(){
 
 
   //Getting data from the file.
-  $('#input_file').on('change', function(){
-    var file = this.files[0];
-
-    var reader = new FileReader();
-    reader.onload = function(progressEvent){
-      // Entire file
-      main_file_data = this.result;
-      file_data = $.csv.toObjects(main_file_data);
-      console.log($.csv.toObjects(main_file_data));
-      init();
-    };
-    reader.readAsText(file);
-  });
+  
 
   function buildCategoryMenu()
   {
@@ -310,7 +283,7 @@ $(function(){
 
   function createModelView(model_name)
   {
-    $('.model-list-view').append('<div class="model-display col-md-3" id='+model_name+'><ul class="list-group shadow-z-2"></ul></div>');
+    $('.model-list-view').append('<div class="model-display col-md-2" id='+model_name+'><ul class="list-group shadow-z-2"></ul></div>');
     fillSingleModelDescription(model_name);
   }
 
@@ -323,27 +296,9 @@ $(function(){
     $('#model-select').removeAttr('disabled');
   }
 
-  $('#addToCompare').click(function(){
-    if($('#model-select option').size() ==0)
-    {
-      alert("No models to choose");
-    }
-    else
-    {
-      console.log($('#model-select').val());
-      var val = $('#model-select').val();
-      $('option[value="'+val+'"]').remove();
-      createModelView(val);
-    }
-  });
+  
 
-  $(document).on('click','.close',function(){
-    var id = $(this).parents('.model-display').attr('id');
-    console.log("close "+id);
-    var option = '<option value="'+id+'">'+id+'</option>';
-    $('#model-select').append(option);
-    $(this).parents('.model-display').remove();    
-  })
+ 
 
   function fillDifferentiation(){
     $('ul li:even').css('backgroundColor',"#DAD7D7");
@@ -364,4 +319,4 @@ $(function(){
 
 
 
-})
+//})
