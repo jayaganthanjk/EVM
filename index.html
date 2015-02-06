@@ -18,15 +18,15 @@
 		<div class="content">
 		<div class="navbar navbar-default navbar-static-top">
 			<div class="navbar-header">
-				<div class="navbar-brand">Entire Vehicle Database</div>
+				<div class="navbar-brand" style="font-size: 30px;"><center>Vehicle Basics</center></div>
 			</div>
 
-			<!-- search form -->
-			<div class="navbar-form navbar-left">
-				<div class="form-group">
-					<input class="form-control" placeholder="Search" type="text" id="search"></input>
-				</div>
-			</div>
+			<ul class="nav navbar-nav navbar-left">
+				<li id="hide-menu"><a style="margin-right:20px;">
+					<i class="mdi-content-undo" style="font-size:25px;"></i>
+				</a></li>
+			</ul>
+
 			<!-- search form ends -->
 
 			<ul class="nav navbar-nav navbar-right">
@@ -34,10 +34,16 @@
 					<i class="mdi-navigation-apps" style="font-size:25px;" data-toggle="modal" data-target=".bs-example-modal-sm"></i>
 				</a></li>
 			</ul>
+			<!-- search form -->
+			<div class="navbar-form navbar-right">
+				<div class="input-group">
+					<input class="form-control" placeholder="Search" type="text" id="search" />
+				</div>
+			</div>
 		</div>
 		<div class="container-fluid">
 			<div class="row" id="list-view">
-				<div class="col-md-2">
+				<div class="col-md-2" id="left-sidebar">
 					<div class="row">
 						<div class="col-md-12">
 							<div class="well">

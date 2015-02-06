@@ -29,6 +29,22 @@ $(document).ready(function(){
     $('#'+id).remove();    
   });
 
+  var hidden = 0;
+  $('#hide-menu').click(function(){
+    if(hidden)
+    {
+      $('#left-sidebar').show();
+      $('#hide-menu i').removeClass('mdi-content-redo').addClass('mdi-content-undo');
+      hidden=0;
+    }
+    else
+    {
+      $('#left-sidebar').hide();
+      $("#hide-menu i").removeClass('mdi-content-undo').addClass('mdi-content-redo');
+      hidden=1;
+    }
+  })
+
  $('#search').on('keyup',function(){
   var search = $(this).val().trim().toLowerCase();
     var models = [];

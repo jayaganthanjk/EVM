@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "komit";
+    src: url('../fonts/komit.ttf');
+}
+.navbar-brand
+{
+    position: absolute !important;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+    font-family: "komit";
+    font-size:18px;
+    color:#000 !important;
+}
+
 .sub-category{
   padding-left:20px;
 }
@@ -143,6 +160,7 @@ ul li:nth-child(even){
 .content-wrapper-box{
   overflow-y:scroll;
   height:600px;
+  margin-left:20px;
 }
 .content-wrapper{
   height:600px;
