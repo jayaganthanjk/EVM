@@ -21,10 +21,12 @@ $(document).ready(function(){
   })
   $(document).on('click','.close',function(){
     var id = $(this).parents('.model-display').attr('id');
+    id = id.split('-below')[0];
     //console.log("close "+id);
     var option = '<option value="'+id+'">'+id+'</option>';
     $('#model-select').append(option);
-    $(this).parents('.model-display').remove();    
+    $(this).parents('.model-display').remove();
+    $('#'+id).remove();    
   });
 
  $('#search').on('keyup',function(){
