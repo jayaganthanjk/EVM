@@ -173,8 +173,8 @@
   {
     var content_html_start = '<li class="list-group-item" data-category="';
     var content_html_end = '</li>';
-    $('#description-menu ul').append('<li class="list-group-item model-image-li">'+'<div class="model-image"><img src="img/barathbenz.jpg"></img></div>'+content_html_end);
-    $('#description-menu ul').append('<li class="list-group-item" >Description</li>');
+    $('#description-img').append('<div class="list-group-item model-image-li">'+'<div class="model-image"><img src="img/barathbenz.jpg"></img></div></div>');
+    $('#description-img').append('<div class="list-group-item model-heading" >Description</div>');
     $.each(categories, function(category_key, category_value){
       $('#description-menu ul').append(content_html_start+category_value+"\">"+category_value+content_html_end);
       $('#description-menu ul li:nth-last-child(1)').last().addClass("text-bold event-description");
@@ -239,8 +239,9 @@
     var content_html_start = '<li class="list-group-item" data-category="';
     var content_html_end = '<div class="small-img pull-right popover-with-html image" data-container="body" data-trigger="manual" data-toggle="popover" data-placement="left" data-content=""></div></li>';
     var model_image_content_html_end = '<div style="background-image:url(\'img/'+findImageName("Main",model_name)+'\');background-size:contain;background-repeat:no-repeat;float:left;" class="small-img popover-with-html image" data-container="body" data-trigger="manual" data-toggle="popover" data-placement="left" data-content=""></div>';
-    $('#'+model_name+' ul').append('<li class="list-group-item model-image-li"><div class="model-image"><img src="img/'+findImageName("Main",model_name)+'"></img></div></li>');
-    $('#'+model_name+' ul').append('<li class="list-group-item text-success model-heading" >'+model_name+'<span class="pull-right"> <div class="close">X</div></span></li>');
+    //$('#'+model_name+' ul').append('<li class="list-group-item model-image-li"><div class="model-image"><img src="img/'+findImageName("Main",model_name)+'"></img></div></li>');
+    $('#'+model_name+'-below ul').append('<div class="list-group-item model-image-li"><div class="model-image"><img src="img/'+findImageName("Main",model_name)+'"></img></div></div>');
+    $('#'+model_name+'-below ul').append('<div class="list-group-item text-success model-heading" >'+model_name+'<span class="pull-right"> <div class="close">X</div></span></div>');
 
     $.each( categories , function(category_key,category_value){
       if($('input[data-category="'+category_value+'"]').is(':checked'))
@@ -284,6 +285,7 @@
   function createModelView(model_name)
   {
     $('.model-list-view').append('<div class="model-display col-md-2" id='+model_name+'><ul class="list-group shadow-z-2"></ul></div>');
+    $('.model-list-view-below').append('<div class="model-display col-md-2" id="'+model_name+'-below" ><ul class="list-group"></ul></div>');
     fillSingleModelDescription(model_name);
   }
 
