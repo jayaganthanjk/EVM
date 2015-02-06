@@ -264,6 +264,13 @@ $(document).ready(function(){
         $('.model-menu-below').scrollLeft(lastScrollLeft);
     }
   });
+   $('.model-menu-below').scroll(function() {
+    var documentScrollLeft = $(this).scrollLeft();
+    if (lastScrollLeft != documentScrollLeft) {
+        lastScrollLeft = documentScrollLeft;
+        $('.model-menu').scrollLeft(lastScrollLeft);
+    }
+  });
   /*
     else{
       console.log('scroll y');
