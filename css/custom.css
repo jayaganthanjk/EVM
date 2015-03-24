@@ -19,7 +19,7 @@
   padding-left:20px;
 }
 .category-list{
-  display:none;
+  /*display:none;*/
   text-transform: capitalize;
 }
 .sub-category-description{
@@ -175,6 +175,15 @@ ul li:nth-child(even){
   border-radius:0px;
   border-bottom-right-radius: 0px !important;
   border-bottom-left-radius: 0px !important;
+}
+
+.category-plus{
+  cursor:pointer;
+}
+
+#no-models-error-msg
+{
+  display:none;
 }
 
 

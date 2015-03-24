@@ -22,12 +22,17 @@ $(document).ready(function(){
   $(document).on('click','.close',function(){
     var id = $(this).parents('.model-display').attr('id');
     id = id.split('-below')[0];
-    //console.log("close "+id);
     var option = '<option value="'+id+'">'+id+'</option>';
     $('#model-select').append(option);
     $(this).parents('.model-display').remove();
-    $('#'+id).remove();    
+    $('#'+id).remove();        
   });
+
+  $(document).on('click','.category-plus',function(){
+    console.log("clicked plus");
+    var category = $(this).parent().children().first().children().first().data('category');
+    $('.sub-category input[data-category="'+category+'"]').parents('.sub-category').fadeToggle();
+  })
 
   var hidden = 0;
   $('#hide-menu').click(function(){
@@ -43,7 +48,37 @@ $(document).ready(function(){
       $("#hide-menu i").removeClass('mdi-content-undo').addClass('mdi-content-redo');
       hidden=1;
     }
-  })
+  });
+
+  $('#advanced-keyword').on('keyup',function(){
+    var models_all = [];
+    var val = $(this).val();
+    if(val.length > 0)
+    {
+      if($('.close').length > 1)
+      {
+        $('.model-heading .close').click();
+      }
+      console.log("from the box "+val);
+      models_all = getModels();
+      $.each(models_all, function(key,value){
+        value_lower = value.toLowerCase();
+        val = val.toLowerCase();
+        if(value_lower.indexOf(val) != -1)
+        {
+          $('option[value="'+value+'"]').remove();
+          createModelView(value);
+          normaliseHeights();
+        }
+      });
+    }
+    else{
+      if($('.close').length > 1)
+      {
+        $('.model-heading .close').click();
+      }
+    }
+  });
 
  $('#search').on('keyup',function(){
   var search = $(this).val().trim().toLowerCase();
@@ -101,6 +136,7 @@ $(document).ready(function(){
     else
     {
       //console.log($('#model-select').val());
+      $('.event-description').removeClass('search-display');
       var val = $('#model-select').val();
       $('option[value="'+val+'"]').remove();
       createModelView(val);

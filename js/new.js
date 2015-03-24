@@ -108,6 +108,17 @@
     });
   }
 
+  function getModels(){
+    var return_data = [];
+    $.each(file_data[1], function(key, element) {
+      if(isValid(key) && key.toLowerCase().indexOf("model") != -1)
+      {
+        return_data.push(key);
+      }
+    });
+    return return_data;
+  }
+
   function findModelDescription(model,category){
     var model_description_array = [];
     $.each(file_data, function(key,value){
@@ -124,6 +135,43 @@
     return model_description_array;
   }
 
+  function findIndividualModelDescription(model,description,category)
+  {
+    var return_data;
+    console.log(model);
+    console.log(description);
+    console.log(category);
+    $.each(file_data, function(key,value){
+      if( (isValid(file_data[key].Description) && file_data[key].Description == description) && (file_data[key].Category) && file_data[key].Category == category)
+      {
+        $.each(file_data[key],function(k,e){
+          if(isValid(k) && k == model )
+          {
+            return_data = e;
+          }
+        })
+      }
+    })
+    return return_data;
+  }
+
+  function findIndividualSubCategoryModelDescription(model,description,category)
+  {
+    var return_data;
+    console.log("Individual sub category Model description "+category);
+    $.each(file_data, function(key,value){
+      if( (isValid(file_data[key].Description) && file_data[key].Description == description) && (file_data[key].SubCategory) && file_data[key].SubCategory == category)
+      {
+        $.each(file_data[key],function(k,e){
+          if(isValid(k) && k == model )
+          {
+            return_data = e;
+          }
+        })
+      }
+    })
+    return return_data;
+  }
 
   //Getting data from the file.
   
@@ -133,17 +181,24 @@
     var checkbox_html_start = "<div class='checkbox category-list'><label><input type='checkbox' class='category-check category' ";
     var checkbox_html_end = "</label></div>";
     $.each( categories, function(key,value){
-      var html_content = checkbox_html_start+ "data-category='" +value+ "' />"+value +checkbox_html_end;
+      if(findSubCategory(categories[key]).length > 0)
+      {
+        var html_content = checkbox_html_start+ "data-category='" +value+ "' />"+value +"</label><span class='category-plus'>&nbsp;[+]</span></div>";
+      }
+      else
+      {
+        var html_content = checkbox_html_start+ "data-category='" +value+ "' />"+value +"</label></div>";
+      }
       $('#categories-menu').append(html_content);
       if(findSubCategory(categories[key]).length > 0){
         $.each( findSubCategory(categories[key]), function(sub_key, sub_value){
-          var html_content = checkbox_html_start+ "data-category='" +value+ "' data-sub-category='"+sub_value+"' />"+sub_value +checkbox_html_end;
+          var html_content = checkbox_html_start+ "data-category='" +value+ "' data-sub-category='"+sub_value+"'/>"+sub_value +checkbox_html_end;
           $('#categories-menu').append(html_content);
-          $('#categories-menu div:nth-last-child(1)').last().addClass("sub-category event ");
+          $('#categories-menu div:nth-last-child(1)').last().addClass("sub-category event ").css('display','none');
         });
       }
     });
-    $('.category-list').fadeIn(2000);
+    //$('.category-list').fadeIn(2000);
   }
 
   function fillCategoryDescription(category){

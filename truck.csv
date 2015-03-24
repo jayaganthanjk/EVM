@@ -1,4 +1,4 @@
-S.No,Category,SubCategory,Description,Model-1234,Model-4567,Model-8965,Model-9816,Model-1203,Model-9876
+S.No,Category,SubCategory,Description,Model-1234,Model-4567R,Model-8965,Model-9816R,Model-1203T,Model-9876T
 1,Basic,,Fin weight,11,101,1001,2000,3000,4000
 ,Basic,,Input weight,12,102,1002,2001,3001,4001
 ,Basic,,Others,13,103,1003,2002,3002,4002
@@ -7,7 +7,7 @@ S.No,Category,SubCategory,Description,Model-1234,Model-4567,Model-8965,Model-981
 2,Chasis,,Settled part cost,16,106,1006,2005,3005,4005
 ,Chasis,,Settled tool cost,17,107,1007,2006,3006,4006
 ,Chasis,,Specification,18,108,1008,2007,3007,4007
-,Chasis,,1,19,109,1009,2008,3008,4008
+,Chasis,,Fin weight,50,109,1009,2008,3008,4008
 ,Chasis,,2,20,110,1010,2009,3009,4009
 3,Engine,dashboard,3,21,111,1011,2010,3010,4010
 ,Engine,dashboard,4,22,112,1012,2011,3011,4011
