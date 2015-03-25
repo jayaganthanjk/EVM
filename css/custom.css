@@ -186,4 +186,226 @@ ul li:nth-child(even){
   display:none;
 }
 
+/* Loader css start */
+
+@-webkit-keyframes spinning {
+    0%, 100% {
+        box-shadow:
+             0em  1em 0 .125em white, /* bottom */
+             1em  1em 0 .250em white, /* bottom right */
+             1em  0em 0 .125em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    12.5% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0 .125em white, /* bottom right */
+             1em  0em 0 .250em white, /* right */
+             1em -1em 0 .125em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    25% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0 .125em white, /* right */
+             1em -1em 0 .250em white, /* top right */
+             0em -1em 0 .125em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    37.5% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0 .125em white, /* top right */
+             0em -1em 0 .250em white, /* top */
+            -1em -1em 0 .125em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }  
+    
+    50% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0 .125em white, /* top */
+            -1em -1em 0 .250em white, /* top left */
+            -1em  0em 0 .125em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    62.5% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0 .125em white, /* top left */
+            -1em  0em 0 .250em white, /* left */
+            -1em  1em 0 .125em white; /* bottom left */
+    }  
+    
+    75% {
+        box-shadow:
+             0em  1em 0 .125em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0 .125em white, /* left */
+            -1em  1em 0 .250em white; /* bottom left */
+    }
+    
+    87.5% {
+        box-shadow:
+             0em  1em 0 .250em white, /* bottom */
+             1em  1em 0 .125em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0 .125em white; /* bottom left */
+    } 
+}
+
+.spinner {
+  position: absolute;
+  z-index: 10000;
+  top: 200px;
+  left: 50%;
+  display: inline-block;
+  font-size: 16px;
+  width: .5em;
+  height: .5em;
+  border-radius: 50%;
+  -webkit-animation: spinning .75s infinite;
+  -ms-animation: spinning .75s infinite;
+}
+
+@-ms-keyframes spinning {
+    0%, 100% {
+        box-shadow:
+             0em  1em 0 .125em white, /* bottom */
+             1em  1em 0 .250em white, /* bottom right */
+             1em  0em 0 .125em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    12.5% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0 .125em white, /* bottom right */
+             1em  0em 0 .250em white, /* right */
+             1em -1em 0 .125em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    25% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0 .125em white, /* right */
+             1em -1em 0 .250em white, /* top right */
+             0em -1em 0 .125em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    37.5% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0 .125em white, /* top right */
+             0em -1em 0 .250em white, /* top */
+            -1em -1em 0 .125em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }  
+    
+    50% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0 .125em white, /* top */
+            -1em -1em 0 .250em white, /* top left */
+            -1em  0em 0 .125em white, /* left */
+            -1em  1em 0    0em white; /* bottom left */
+    }
+    
+    62.5% {
+        box-shadow:
+             0em  1em 0    0em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0 .125em white, /* top left */
+            -1em  0em 0 .250em white, /* left */
+            -1em  1em 0 .125em white; /* bottom left */
+    }  
+    
+    75% {
+        box-shadow:
+             0em  1em 0 .125em white, /* bottom */
+             1em  1em 0    0em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0 .125em white, /* left */
+            -1em  1em 0 .250em white; /* bottom left */
+    }
+    
+    87.5% {
+        box-shadow:
+             0em  1em 0 .250em white, /* bottom */
+             1em  1em 0 .125em white, /* bottom right */
+             1em  0em 0    0em white, /* right */
+             1em -1em 0    0em white, /* top right */
+             0em -1em 0    0em white, /* top */
+            -1em -1em 0    0em white, /* top left */
+            -1em  0em 0    0em white, /* left */
+            -1em  1em 0 .125em white; /* bottom left */
+    } 
+}
+.overlay{
+  position:absolute;
+  background-color: rgba(0,0,0,0.6);
+  width:100%;
+  height:100%;
+  top:0;
+  right:0;
+  left:0;
+  z-index:9000;
+}
+/* Loader css end */
 

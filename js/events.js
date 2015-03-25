@@ -125,6 +125,7 @@ $(document).ready(function(){
  })
 
  $('#addToCompare').click(function(){
+    showLoader();
     if($('#model-select').val() === undefined )
     {
       alert("Invalid model. Refresh and try again");
@@ -142,6 +143,7 @@ $(document).ready(function(){
       createModelView(val);
       normaliseHeights();
     }
+    setTimeout(function(){hideLoader();},1000);
   });
     //Getting data from the file.
  $('#input_file').on('change', function(){

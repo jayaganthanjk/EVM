@@ -18,6 +18,8 @@
 		<title>Vehicle Basics | Daimler</title>
 	</head>
 	<body>
+		<div class="overlay" style="display:none;"></div>
+		<span class="spinner" style="display:none;"></span>
 		<div class="background-image"></div>
 		<div class="content">
 		<div class="navbar navbar-default navbar-static-top">
@@ -35,9 +37,18 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<li>
-					<a style="margin-right:20px;">
+					<a>
+					<i class="mdi-action-get-app" style="font-size:25px;" data-toggle="tooltip" data-placement="bottom" title="Export as pdf"></i>
+				</a></li>
+				<li style="background-color:rgba(0,0,0,0);" id="chart-modal-btn" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+					<a>
+					<i class="mdi-editor-insert-chart" style="font-size:25px;" data-toggle="tooltip" data-placement="bottom" title="Generate chart"></i>
+				</a></li>
+				<li>
+					<a style="margin-right:20px;" data-toggle="tooltip" data-placement="bottom" title="Upload data files">
 					<i class="mdi-navigation-apps" style="font-size:25px;" data-toggle="modal" data-target=".bs-example-modal-sm"></i>
 				</a></li>
+
 			</ul>
 			<!-- search form -->
 			<div class="navbar-form navbar-right">
@@ -49,13 +60,6 @@
 		<div class="container-fluid">
 			<div class="row" id="list-view">
 				<div class="col-md-2" id="left-sidebar">
-					<div class="row">
-						<div class="col-md-12">
-							<a class="btn btn-warning btn-fab mdi-editor-insert-chart" id="chart-modal-btn"></a></li>
-							<a class="btn btn-info btn-fab btn-raised mdi-action-grade"></a></li>
-							<a class="btn btn-danger btn-fab btn-raised mdi-action-grade"></a></li>
-						</div>
-					</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="well">

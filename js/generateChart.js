@@ -12,10 +12,29 @@ $(function () {
   function fillDescriptionForGraph()
   {
     var a = [];
+    var model = getModelsForGraph();
+    model = model[0];
     $('.category-description').each(function(){
       if($(this).css('display') == "block" && !($(this).parents('.model-display').length > 0))
       {
-        a.push($(this).text());
+        if(typeof $(this).data('sub-category') != 'undefined')
+        {
+          return_data = findIndividualSubCategoryModelDescription(model, $(this).text(),$(this).data('category'),$(this).data('sub-category'));
+          var result = parseInt(return_data);
+          if(!isNaN(result))
+          {
+            a.push($(this).text());
+          }
+        }
+        else
+        {
+          return_data = findIndividualModelDescription(model, $(this).text(), $(this).data('category'));
+          var result = parseInt(return_data);
+          if(!isNaN(result))
+          {
+            a.push($(this).text());
+          }
+        }        
       }
     })
     var unique = a.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
@@ -38,7 +57,9 @@ $(function () {
 
   function findAggregateDescription(model,aggregate)
   {
-    var return_data;
+    var return_data=10;
+
+    /*
     if(aggregate.split('`category').length>1)
     {
       var aggregate_temp_arr = aggregate.split('`category');
@@ -47,7 +68,7 @@ $(function () {
     else{
       var aggregate_temp_arr = aggregate.split('`sub-category');
       return_data = findIndividualSubCategoryModelDescription(model,aggregate_temp_arr[0],aggregate_temp_arr[1]);
-    }
+    }*/
     return return_data;
   }
 
@@ -95,7 +116,7 @@ $(function () {
     $('#chart-wrapper').remove();
     $('#chart-wrapper-parent').append('<div id="chart-wrapper"></div>');
 
-    $('#chart-wrapper').highcharts({
+    /*$('#chart-wrapper').highcharts({
         chart: {
             type: 'column'
         },
@@ -150,11 +171,81 @@ $(function () {
             }
         },
         series: aggregates
+    });*/
+ $('#chart-wrapper').highcharts({
+
+        chart: {
+            type: 'column'
+        },
+
+        title: {
+            text: ''
+        },
+
+        xAxis: {
+            categories: models,
+        },
+
+        yAxis: {
+            allowDecimals: false,
+            min: 0,
+            title: {
+                text: 'Number of fruits'
+            },
+            stackLabels: {
+                enabled: true,
+                style: {
+                    fontWeight: 'bold',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                }
+            }
+        },
+
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    'Total: ' + this.point.stackTotal;
+            }
+        },
+
+        plotOptions: {
+            column: {
+                stacking: 'normal',
+                dataLabels: {
+                    align: 'center',
+                    enabled: true,
+                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                    style: {
+                        textShadow: '0 0 3px black',
+                    },                    
+                }
+            }
+        },
+
+        series: [{
+            name: 'John',
+            data: [5, 3, 4, 7, 2],
+            stack: 'input weight'
+        }, {
+            name: 'Joe',
+            data: [3, 4, 4, 2, 5],
+            stack: 'input weight'
+        }, {
+            name: 'Jane',
+            data: [2, 5, 6, 2, 1],
+            stack: 'finished weight'
+        }, {
+            name: 'Janet',
+            data: [3, 0, 4, 4, 3],
+            stack: 'finished weight'
+        }]
     });
   }
 
   // Function to display graph based on the analytics
   $('#draw-graph').click(function(){
+      showLoader();
       var models_for_graph = getModelsForGraph();
       var aggregates_for_graph = [];
       var display_graph_flag;
@@ -179,11 +270,13 @@ $(function () {
           $(this).find('option:eq(0)').prop('selected', true);          
         })
       }
+      hideLoader();
   });
   // Function to display graph based on the analytics end
 
   $('#chart-modal-btn').click(function(){
     $('#chart-modal').modal('toggle');
+    showLoader();
     if($('.model-display').size() == 0)
     {
       $('#no-models-error-msg').fadeIn();
@@ -194,7 +287,8 @@ $(function () {
       $('#no-models-error-msg').fadeOut();
       fillDescriptionForGraph();
     }
-  })
+    hideLoader();
+  });
 
   $('#chart-modal').on('hidden.bs.modal', function () {
     // do something…

@@ -10,7 +10,19 @@
   image_data = data;
   
  }
-  
+
+  function showLoader()
+  {
+    $('.overlay').show();
+    $('.spinner').show();
+  } 
+
+  function hideLoader()
+  {
+    $('.overlay').hide();
+    $('.spinner').hide();
+  }
+
   // Getting image for given category and model name
 
   function findImageName(category, model)
@@ -138,9 +150,6 @@
   function findIndividualModelDescription(model,description,category)
   {
     var return_data;
-    console.log(model);
-    console.log(description);
-    console.log(category);
     $.each(file_data, function(key,value){
       if( (isValid(file_data[key].Description) && file_data[key].Description == description) && (file_data[key].Category) && file_data[key].Category == category)
       {
@@ -155,12 +164,11 @@
     return return_data;
   }
 
-  function findIndividualSubCategoryModelDescription(model,description,category)
+  function findIndividualSubCategoryModelDescription(model,description,category,sub_category)
   {
     var return_data;
-    console.log("Individual sub category Model description "+category);
-    $.each(file_data, function(key,value){
-      if( (isValid(file_data[key].Description) && file_data[key].Description == description) && (file_data[key].SubCategory) && file_data[key].SubCategory == category)
+    $.each(file_data, function(key,value){ 
+      if( (isValid(file_data[key].Description) && file_data[key].Description == description) && (file_data[key].SubCategory) && file_data[key].SubCategory == sub_category && (file_data[key].Category) && file_data[key].Category == category)
       {
         $.each(file_data[key],function(k,e){
           if(isValid(k) && k == model )
