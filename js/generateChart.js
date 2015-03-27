@@ -55,51 +55,67 @@ $(function () {
     return models_for_graph;
   }
 
-  function findAggregateDescription(model,aggregate)
+  function findAggregateDescription(model,aggregate,category,sub_category)
   {
-    var return_data=10;
-
-    /*
-    if(aggregate.split('`category').length>1)
+    if(sub_category.length>1)
     {
-      var aggregate_temp_arr = aggregate.split('`category');
-      return_data = findIndividualModelDescription(model,aggregate_temp_arr[0],aggregate_temp_arr[1]);
+      return_data = findIndividualSubCategoryModelDescription(model,aggregate,category,sub_category);
     }
-    else{
-      var aggregate_temp_arr = aggregate.split('`sub-category');
-      return_data = findIndividualSubCategoryModelDescription(model,aggregate_temp_arr[0],aggregate_temp_arr[1]);
-    }*/
+    console.log(return_data);
     return return_data;
+  }
+
+  function fetchSelectedCategories()
+  {
+    var category_sub_category_group = [];
+    $('.category').each(function(){
+      if($(this).is(':checked'))
+      {
+        var category = $(this).data('category');
+        var sub_category = $(this).data('sub-category');
+        var category_sub_category_element = [];
+        if(typeof sub_category != 'undefined')
+        {
+          category_sub_category_element.push(category);
+          category_sub_category_element.push(sub_category);
+          category_sub_category_group.push(category_sub_category_element);
+        }
+      }
+    });
+    return category_sub_category_group;
   }
 
   function analyseChartAggregateOptions(models_for_graph)
   {
-    var aggregates = [];
+    var aggregates = [],categories = [];
     var error_flag = 0;
     $('.chart-option').each(function()
     {
       var individual_aggregate = $(this).val();
       if(individual_aggregate != null)
       {
-        var aggregate_data = [];
-        $.each(models_for_graph, function(key,value){
-          var model_description_value = findAggregateDescription(value,individual_aggregate);
-          model_description_value = parseInt(model_description_value);
-          if(isNaN(model_description_value))
-          {
-            error_flag=1;
-          }
-          else
-          {
-            aggregate_data.push(parseInt(model_description_value));          
-          }
-        })
-        individual_aggregate = individual_aggregate.replace('`category','-');
-        individual_aggregate = individual_aggregate.replace('`sub-category','-');
-        aggregates.push({
-          name: individual_aggregate,
-          data: aggregate_data
-        });
+        categories = fetchSelectedCategories();
+        console.log(categories);
+        $.each(categories, function(k,v){
+          var aggregate_data = [];
+          $.each(models_for_graph, function(key,value){
+            model_description_value = findAggregateDescription(value,individual_aggregate,v[0],v[1]);
+            model_description_value = parseInt(model_description_value);
+            if(isNaN(model_description_value))
+            {
+              error_flag=1;
+            }
+            else
+            {
+              aggregate_data.push(parseInt(model_description_value));          
+            }
+          });
+          aggregates.push({
+            name: v[1],
+            data: aggregate_data,
+            stack: individual_aggregate
+          });
+        })        
       }
     });
     if(error_flag == 1)
@@ -108,6 +124,7 @@ $(function () {
     }
     else
     {
+      console.log(aggregates);
       return aggregates;
     }
   }
@@ -116,62 +133,6 @@ $(function () {
     $('#chart-wrapper').remove();
     $('#chart-wrapper-parent').append('<div id="chart-wrapper"></div>');
 
-    /*$('#chart-wrapper').highcharts({
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Comparison chart'
-        },
-        xAxis: {
-            categories: models
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Total fruit consumption'
-            },
-            stackLabels: {
-                enabled: true,
-                style: {
-                    fontWeight: 'bold',
-                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-                }
-            }
-        },
-        legend: {
-            align: 'right',
-            x: -30,
-            verticalAlign: 'top',
-            y: 25,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#CCC',
-            borderWidth: 1,
-            shadow: false
-        },
-        tooltip: {
-            formatter: function () {
-                return '<b>' + this.x + '</b><br/>' +
-                    this.series.name + ': ' + this.y + '<br/>' +
-                    'Total: ' + this.point.stackTotal;
-            }
-        },
-        plotOptions: {
-            column: {
-                stacking: 'normal',
-                dataLabels: {
-                    align: 'center',
-                    enabled: true,
-                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                    style: {
-                        textShadow: '0 0 3px black',
-                    },                    
-                }
-            }
-        },
-        series: aggregates
-    });*/
  $('#chart-wrapper').highcharts({
 
         chart: {
@@ -179,24 +140,25 @@ $(function () {
         },
 
         title: {
-            text: ''
+            text: 'Comparison Chart'
         },
 
         xAxis: {
-            categories: models,
+            categories: models
         },
 
         yAxis: {
             allowDecimals: false,
             min: 0,
             title: {
-                text: 'Number of fruits'
+                text: 'some'
             },
             stackLabels: {
                 enabled: true,
                 style: {
                     fontWeight: 'bold',
-                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    textOverflow: 'clip',
+                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
                 }
             }
         },
@@ -223,23 +185,7 @@ $(function () {
             }
         },
 
-        series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2],
-            stack: 'input weight'
-        }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5],
-            stack: 'input weight'
-        }, {
-            name: 'Jane',
-            data: [2, 5, 6, 2, 1],
-            stack: 'finished weight'
-        }, {
-            name: 'Janet',
-            data: [3, 0, 4, 4, 3],
-            stack: 'finished weight'
-        }]
+        series: aggregates
     });
   }
 

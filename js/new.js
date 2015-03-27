@@ -166,7 +166,7 @@
 
   function findIndividualSubCategoryModelDescription(model,description,category,sub_category)
   {
-    var return_data;
+    var return_data=0;
     $.each(file_data, function(key,value){ 
       if( (isValid(file_data[key].Description) && file_data[key].Description == description) && (file_data[key].SubCategory) && file_data[key].SubCategory == sub_category && (file_data[key].Category) && file_data[key].Category == category)
       {

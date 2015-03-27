@@ -1,0 +1,179 @@
+S.No,Category,SubCategory,Description,Model-914R,Model-2523R,Model-1214R,Model-3123R
+1,Vehicle Basics,General Information,GVW (Ton),9,25,12,31
+1,Vehicle Basics,General Information,Wheel Base(mm),3760,5100,3760,5100
+1,Vehicle Basics,General Information,Type,Rigid,Rigid,Rigid,Rigid
+1,Vehicle Basics,General Information,Overall Length (mm),6980,9867,6380,9867
+1,Vehicle Basics,General Information,Overall Width (mm),1995,2490,1990,2490
+1,Vehicle Basics,General Information,Overall Height (mm),2420,2960,2500,2960
+2,Cost Information,Wheel RIM,Type,6x16,7.5x20,6.5x20,7.5x20
+2,Cost Information,Wheel RIM,Finished Weight (Kg/Unit),24.71,45.45,43.56,45.45
+2,Cost Information,Wheel RIM,Initial Weight (Kg/Unit),30.31,67.5,58.09,67.5
+2,Cost Information,Wheel RIM,Qty/Vehicle,7,11,7,13
+2,Cost Information,Wheel RIM,Bottom Up Cost (Rs/Wheel),1640,3072,2714,3072
+2,Cost Information,Wheel RIM,Settled Cost (Rs/Wheel),1740,3322,2914,3322
+2,Cost Information,Wheel RIM,Raw Material,IS2062,IS2062,IS2062,IS2062
+2,Cost Information,Wheel RIM,Raw Material,C-25,C-25,C-25,C-25
+2,Cost Information,Wheel RIM,Supplier ,Wheels India,Wheels India,Wheels India,Wheels India
+2,Cost Information,CiW+DiW,Finished Weight (Kg/Unit),202,331,202,331
+2,Cost Information,CiW+DiW,Initial Weight (Kg/Unit),344,568,472,568
+2,Cost Information,CiW+DiW,Bottom Up Cost (Rs),18647,29581,18647,29581
+2,Cost Information,CiW+DiW,Settled Cost (Rs),21827,33883,21827,33883
+2,Cost Information,CiW+DiW,Major Supplier,MSGI &GSH,MSGI &GSH,MSGI &GSH,MSGI &GSH
+2,Cost Information,Steering Wheel,Bottom Up Cost (Rs),800,909,800,909
+2,Cost Information,Steering Wheel,Settled Cost (Rs),910,1073,910,1073
+2,Cost Information,Steering Wheel,Supplier ,Takata & Premium Steering ,Takata & Premium Steering ,Takata & Premium Steering ,Takata & Premium Steering 
+2,Cost Information,Steering Wheel,Steering Wheel Diameter (mm),402,502,402,502
+2,Cost Information,Steering Wheel,Finished Weight (Kg/Unit),2.86,3.92,2.86,3.92
+2,Cost Information,Steering Wheel,Initial Weight (Kg/Unit),3.8,4.75,3.8,4.75
+2,Cost Information,Fuel System,Fuel Tank Type,Crown,Cylindrical,Crown,Cylindrical
+2,Cost Information,Fuel System,Fuel Tank Capacity (Ltrs),160,380,160,380
+2,Cost Information,Fuel System,Finished Weight (Kg/Unit),51,83,51,83
+2,Cost Information,Fuel System,Initial Weight (Kg/Unit),66.3,107.9,66.3,107.9
+2,Cost Information,Fuel System,Bottom Up Cost (Rs),7529,8760,7529,8760
+2,Cost Information,Fuel System,Settled Cost (Rs),8855,11782,8855,11782
+2,Cost Information,Fuel System,Supplier ,Dali & Samir,Dali & Samir,Dali & Samir,Dali & Samir
+2,Cost Information,Instrumental Panel,Input Weight (Kg/Unit),12.8,17.4,12.8,17.4
+2,Cost Information,Instrumental Panel,Finished Weight (Kg/Unit),10.08,16.6,10.08,16.6
+2,Cost Information,Instrumental Panel,Bottomup Cost,2718,2127,2718,2127
+2,Cost Information,Instrumental Panel,Settled Cost,2905,2420,2905,2420
+2,Cost Information,Instrumental Panel,Raw Material,Polypropylene & 20% Talc Filled ,Polypropylene & 20% Talc Filled ,Polypropylene & 20% Talc Filled ,Polypropylene & 20% Talc Filled 
+2,Cost Information,Instrumental Panel,Major Supplier,Motherson & Jyothi,Motherson & Jyothi,Motherson & Jyothi,Motherson & Jyothi
+2,Cost Information,Cooling Module,Finished Weight (Kg/Unit),2.86,3.92,2.86,3.92
+2,Cost Information,Cooling Module,Bottomup Cost,868.56,979.24,868.5,979.24
+2,Cost Information,Cooling Module,Settled Cost,987,1171.71,987,1171.71
+2,Cost Information,Cooling Module,Raw Material,Aluminium,Aluminium,Aluminium,Aluminium
+2,Cost Information,Cooling Module,Major Supplier,Modine,Modine,Modine,Modine
+3,Raw Material Information,HR Steel,Input Weight (Kg),1690.32849,5025.331625,2217.443781,5329.833973
+3,Raw Material Information,HR Steel,Finished Weight (Kg),1436.097471,4182.597107,1912.631239,4420.737107
+3,Raw Material Information,HR Steel,Scrap (Kg),254.2310193,842.7345184,304.8125421,909.0968666
+3,Raw Material Information,CR Steel,Input Weight (Kg),1166.831491,1521.24843,907.5130641,1694.69343
+3,Raw Material Information,CR Steel,Finished Weight (Kg),974.4887152,1078.141107,726.4412728,1247.222107
+3,Raw Material Information,CR Steel,Scrap (Kg),192.3427755,443.107323,181.0717913,447.471323
+3,Raw Material Information,Forge Steel,Input Weight (Kg),509.2873372,1447.200959,713.2909741,1445.800959
+3,Raw Material Information,Forge Steel,Finished Weight (Kg),346.2232232,960.0579249,462.6503583,954.3789249
+3,Raw Material Information,Forge Steel,Scrap (Kg),163.064114,487.1430341,250.6406158,491.4220341
+3,Raw Material Information,Casting ,Input Weight (Kg),685.71763,1558.72794,876.86563,1878.33794
+3,Raw Material Information,Casting ,Finished Weight (Kg),626.93563,1101.59794,797.94563,1380.43794
+3,Raw Material Information,Casting ,Scrap (Kg),58.782,457.13,78.92,497.9
+3,Raw Material Information,Plastics,Input Weight (Kg),56.920418,77.593503,50.307418,77.569503
+3,Raw Material Information,Plastics,Finished Weight (Kg),44.723,73.1327,42.014,73.1087
+3,Raw Material Information,Plastics,Scrap (Kg),12.197418,4.460803,8.293418,4.460803
+3,Raw Material Information,Natural Rubber,Input Weight (Kg),84.625,245.8711,448.5,1120.2011
+3,Raw Material Information,Natural Rubber,Finished Weight (Kg),84.559,245.8371,448.434,1120.1671
+3,Raw Material Information,Natural Rubber,Scrap (Kg),0.066,0.034,0.066,0.034
+3,Raw Material Information,Synthetic Rubber,Input Weight (Kg),30.243,78.97874571,160.4424257,378.2187457
+3,Raw Material Information,Synthetic Rubber,Finished Weight (Kg),30.243,78.96074571,158.4424257,378.2007457
+3,Raw Material Information,Synthetic Rubber,Scrap (Kg),-,0.018,2,0.018
+3,Raw Material Information,Aluminium Alloy,Input Weight (Kg),82.499,144.23282,94.059,144.39582
+3,Raw Material Information,Aluminium Alloy,Finished Weight (Kg),80.879,138.06082,92.109,138.29382
+3,Raw Material Information,Aluminium Alloy,Scrap (Kg),1.62,6.172,1.95,6.102
+3,Raw Material Information,Copper,Input Weight (Kg),17.05331472,24.919256,20.53982483,25.391256
+3,Raw Material Information,Copper,Finished Weight (Kg),17.05331472,24.897256,20.53982483,25.369256
+3,Raw Material Information,Copper,Scrap (Kg),-,0.022,-,0.022
+3,Raw Material Information,Lead,Input Weight (Kg),24.4,44,24.4,44
+3,Raw Material Information,Lead,Finished Weight (Kg),24.4,44,24.4,44
+3,Raw Material Information,Lead,Scrap (Kg),-,-,-,-
+3,Raw Material Information,Others,Input Weight (Kg),290.49,803.8906275,631.7819645,1594.302667
+3,Raw Material Information,Others,Finished Weight (Kg),250.16,704.7564075,590.3035845,1495.170447
+3,Raw Material Information,Others,Scrap (Kg),40.34,99.13422,41.47838,99.13222
+4,Specification,Engine,Power(HP),140,230,140,280
+4,Specification,Engine,Torque(NM),420,810,420,810
+4,Specification,Engine,Model Type,4D34i,OM906LA,4D34i,OM906LA
+4,Specification,Engine,Bore x Stroke (mm),104 x 115,102x130,104 x 115,102x130
+4,Specification,Engine,Displacement (L),3.907,6.37,3.907,6.37
+4,Specification,Engine,Valve Mechanism,OHV 4 Valves,OHV 3 Valves,OHV 4 Valves,OHV 3 Valves
+4,Specification,Engine,Cooling Fan Type,Viscous Fan ,Viscous Clutch & Bimetallic Sensor,Viscous Fan ,Viscous Clutch & Bimetallic Sensor
+4,Specification,Engine,Cooling Fan dia (mm)x blade,475x10,654x8,475x10,654x8
+4,Specification,Engine,Cooling System ,Surge Tank Type,Corrugated Fin type & Integrated Surge Tank,Surge Tank Type,Corrugated Fin type & Integrated Surge Tank
+4,Specification,Engine,Air Supply System,Air Compressor (230cc),Air Compressor (238cc),Air Compressor (230cc),Air Compressor (318cc)
+4,Specification,Engine,Power Steering Pump,12LPM,12LPM,12LPM,12LPM
+4,Specification,Engine,Turbocharger,Waste Gate Type,Waste Gate Type,Waste Gate Type,Waste Gate Type
+4,Specification,Engine,EGR,Less,No EGR System,Less,No EGR System
+4,Specification,Engine,Engine ECU,EDC7C4-> EDC17CV54,MR 2A 2.2 V23,"EDC17CV54,V420-V421",MR 2A 2.2 V23
+4,Specification,Engine,Engine Oil ,SAE 15W40,SAE 10-W40,SAE 15W40,SAE 10-W40
+4,Specification,Engine,Operational Conditions ,"Max. Environ. Temp : 45 deg, Startability: -5 deg","Max. Environ. Temp : 45 deg, Startability: -5 deg","Max. Environ. Temp : 45 deg, Startability: -5 deg","Max. Environ. Temp : 45 deg, Startability: -5 deg"
+4,Specification,Clutch,Type,B8080-Single Plate & Hydraulic Control,Single Plate & Hydraulic Control,B8080-Single Plate & Hydraulic Control,Single Plate & Hydraulic Control
+4,Specification,Clutch,Material ,Organic,Organic,Organic,Organic
+4,Specification,Clutch,Diameter (mm),330,395,362,395
+4,Specification,Clutch,Thickness (mm),10,10,10,10
+4,Specification,Clutch,Fluid Tank Capacity (cc),200,200,150,200
+4,Specification,Transmission,Clutch Dia (mm),330,395,395,395
+4,Specification,Transmission,Engine/Transmission Interface,MO3S6,SAE 2,SAE 2,SAE 2
+4,Specification,Transmission,1st Drive Shaft Type,SPL55,GW5E-1700,GW5E-1700,GW5E-1700
+4,Specification,Transmission,2nd Drive Shaft Type,NA,NA ,NA ,NA 
+4,Specification,Transmission,1st Drive Shaft Dia (mm),88.9,180,180,180
+4,Specification,Transmission,2nd Drive Shaft Dia (mm),NA,NA ,NA,NA 
+4,Specification,Transmission,Type,"MO3S6-6 Speed, Synchromesh","G85- 6 Speed,Synchromesh","G85 SAE III- 6 Speed,Synchromesh","G85- 6 Speed,Synchromesh"
+4,Specification,Transmission,Max.I/P Torque (Nm),530,900,900,900
+4,Specification,Transmission,Control,"Floor Shift, Cable Type",Mechanical Gear Shift,"Floor Shift, Cable Type",Mechanical Gear Shift
+4,Specification,Transmission,Oil Grade ,SAE80,SAE40,SAE40,SAE40
+4,Specification,Transmission,Housing Interface,SAE3,SAE2,SAE3,SAE2
+4,Specification,Propellor Shaft,Type,SPL 055-Monotron Type,C1710-Conventional Type,SPL 070- Conventional Type,C2040-Conventional Type
+4,Specification,Propellor Shaft,Diameter (mm),88.9,101.6,90,120
+4,Specification,Propellor Shaft,Thickness (mm),2.11,3.41,3.05,3
+4,Specification,Axle,1st Rear Axle Type,AAM 7.14,RS4/440-11,RS4/440-11,IR440-11
+4,Specification,Axle,2nd Rear Axle Type,NA, NR4i-10, NR4i-10,IT-10
+4,Specification,Rear Axle ,Type,AAM7.14-Full Floating,"IR 440-11, Full Floating",AAM9.22-Full Floating,"IR 440-11, Full Floating"
+4,Specification,Rear Axle ,Capacity (kg),7400,11000,9144,11000
+4,Specification,Rear Axle ,Diff Lock,Less,Inter Wheel  (Optional),Less,Inter Wheel  (Optional)
+4,Specification,Rear Axle ,Wheel Track (mm),1687,1804,1695,1804
+4,Specification,Rear Axle ,Spring Centers(mm),990,930,990,930
+4,Specification,Rear Axle ,Final reduction gear,"Single reduction, hypoid","Single reduction, hypoid","Single reduction, hypoid","Single reduction, hypoid"
+4,Specification,Rear Axle ,Model,Dot 14,IR 440,Dot 22,IR 440
+4,Specification,Rear Axle ,Ratio ,5.13,5.875,5.13,5.875
+4,Specification,Rear Axle ,Oil Capacity (L),6.5,14,8,14
+4,Specification,Rear Axle ,Oil Grade ,80W90/85W140,SAE80W90,80W90/85W140,SAE80W90
+4,Specification,Vehicle Basics,Front Axle Type,IF 3.6,VL4-6.6,VL4-6.6,IF6.6
+4,Specification,Front Axle,Type ,"IF3.6-Reverse Elliot, ""I"" beam",IF 6.6-Reverse Elliot,"IF4.5-Reverse Elliot, ""I"" beam",IF 6.6-Reverse Elliot
+4,Specification,Front Axle,Capacity (kg),3600,6600,4500,6600
+4,Specification,Front Axle,Max.Steering Angle ,51deg/37.44 deg,45deg/34.5 deg,44deg/35 deg,45deg/34.5 deg
+4,Specification,Front Axle,Kingpin Inclination ,7deg,5deg,7deg,5deg
+4,Specification,Vehicle Basics,Pusher Axle Type,NA,VD4-6.6,NA,IM-6SLA
+4,Specification,Tyre and Wheel,Tyre and Disc Wheel ,"Front : Single, Rear : Dual","Front : Single, Rear : Dual","Front : Single, Rear : Dual","Front : Single, Rear : Dual"
+4,Specification,Tyre and Wheel,Tyre,8.25-16-16PR,"10.00R 20,16 PR",8.25-20-16PR,
+4,Specification,Tyre and Wheel,Thread Pattern,"Front : Rib, Rear : Lug","Front : Rib, Rear : Lug","Front : Rib, Rear : Lug","Front : Rib, Rear : Lug"
+4,Specification,Tyre and Wheel,Tyre Type ,Cross Ply,Radial,Cross Ply,Radial
+4,Specification,Tyre and Wheel,PCD,205,335,275,335
+4,Specification,Tyre and Wheel,Spring Rating,J,K,J,K
+4,Specification,Tyre and Wheel,Load Index Front/Rear,129/127,146/143,137/132,146/143
+4,Specification,Tyre and Wheel,Spare Type ,Provided (ROH),Provided (Rib Type),Provided (ROH),Provided (Rib Type)
+4,Specification,Brake System ,Actuation Type,"Fully air S-Cam, Dual Circuit","Fully air S-Cam, Dual Circuit","Fully air S-Cam, Dual Circuit","Fully air S-Cam, Dual Circuit"
+4,Specification,Brake System ,Brake Size Front/Rear,325x140x15/325x140x15,410x180x16.5,360x140x15/360x140x15,410x180x16.5
+4,Specification,Brake System ,Chamber Size Front /Rear,Type 12/ Type 12/12,Type24/Type24/24 &Type 20/24,Type 16/ Type 16/24,Type24/Type16/Type 24/24 & Type 20/24
+4,Specification,Brake System ,Parking Brake,Wheel Park Brake,Spring Actuated with hand brake,Wheel Park Brake,Spring Actuated with hand brake
+4,Specification,Brake System ,Air Tank Capacity ,25L + 25 L,35L+35L+15L,25L + 25 L+15L,35L+35L+15L+25L
+4,Specification,Brake System ,Air Compressor,230cc,238cc,230cc,318cc
+4,Specification,Brake System ,Air Dryer ,"Purge Type, System Protect Valve",Purge Type,"Purge Type, System Protect Valve",Purge Type
+4,Specification,Brake System ,Air Line ,Nylon Tube with VOSS Connector,Nylon Tube with VOSS 230 Connector,Nylon Tube with VOSS Connector,Nylon Tube with VOSS 230 Connector
+4,Specification,Brake System ,ABS ,Less,Optional,Less,Optional
+4,Specification,Steering System,Steering Column Type,Telescopic and Tilt with steering lock,PSA:HFB64 Telescopic & Tilt with Steering Lock,PSA:HFB64 Telescopic & Tilt with Steering Lock,ZF8046  Telescopic & Tilt with Steering Lock
+4,Specification,Steering System,Steering Gear Type,Ball nut type,Integral Power assisted,Ball nut type,Integral Power assisted
+4,Specification,Steering System,Steering Gear ratio,20.4,22.4,20.4,22.4
+4,Specification,Steering System,Steering wheel dia (mm),400,500,400,500
+4,Specification,Chassis Frame ,Side rail /Frame width (mm),"228x80x6, 838",284x70x7,228x80xt6/838,284x70x7
+4,Specification,Chassis Frame ,FUPD,Box Type with foot step,"Integral part of frame front, Circular Type",Box Type with foot step,"Integral part of frame front, Circular Type"
+4,Specification,Chassis Frame ,RUPD,Circular Type,"Integral part of frame front, Circular Type",Circular Type,"Integral part of frame front, Circular Type"
+4,Specification,Chassis Frame ,SUPD,C Section Type,C Section Type,C Section Type,C Section Type
+4,Specification,Front Spring,Spring Specification ,1300 x 70 x 10-9,3x1800x26x90,1300 x 70 x 12-9,3x1800x26x90
+4,Specification,Front Spring,Spring ratio (N/mm),214.9,235.6,335,235.6
+4,Specification,Front Spring,Free Chamber ,115 mm,123mm,111,123mm
+4,Specification,Front Spring,Shock Absorber ,"C25, Double Acting ","Hyd, Double Acting","Hyd, Double Acting","Hyd, Double Acting"
+4,Specification,Front Spring,Anti Roll Bar ,"Dia 40, Solid (Option)",Provided as standard fitment,"Dia 40, Solid (Option)",Provided as standard fitment
+4,Specification,Rear Spring,Spring Specification ,"1300x70x11-10, 1050x70x9-9","12 x 1190 x 18(1),14 (2-3)&13(4-12) x 100 (Driven),10 x 1190 x 14 (2nos) &13 (8nos) x 100 (Non driven)","1300x70x12-10, 900x70x11-10","12 x 1190 x 18(1),14 (2-3)&13(4-12) x 100 (Driven),10 x 1190 x 14 (2nos) &13 (8nos) x 100 (Non driven)"
+4,Specification,Rear Spring,Spring Ratio (N/mm),300/820 ,1052/823 N/mm,367,1052/823 N/mm
+4,Specification,Rear Spring,Free Chamber ,109/55 mm,205/209 mm,135mm,
+4,Specification,Rear Spring,Anti Roll Bar ,"Dia 40, Solid (Option)",Optional- Behind Drive axle,"Dia 40, Solid (Option)",Optional- Behind Drive axle
+4,Specification,Cooling System,Radiator- Type,"Corrugated FinType, Surge Tank System","Corrugated FinType, Surge Tank System","Corrugated FinType, Surge Tank System","Corrugated FinType, Surge Tank System"
+4,Specification,Cooling System,Radiator- Row of Tubes,2,68,2,68
+4,Specification,Cooling System,Radiator-Core Size,675 x560 mm,780x666x49,675 x560x41 mm,780x664.1x41
+4,Specification,Cooling System,Radiator- Fan,"475mm, 10 blade",654mm ring type,"475mm, 10 blade",654mm ring type
+4,Specification,Cooling System,Intercooler- Row of Tubes,1,37,1,37
+4,Specification,Cooling System,Intercooler- Core Size,450 x 358.5 x 50 mm,655x570x50,450 x 358.5 x 50 mm,655x570x50
+4,Specification,Air Intake System,Air Intake System,Snorkel Type at Rear End,Snorkel Type at Rear End,Snorkel Type at Rear End,Snorkel Type at Rear End
+4,Specification,Air Intake System,Air Cleaner,"Dual Filter Paper Element, Mechanical Chock Indicator","Dual Filter, paper element","Dual Filter Paper Element, Mechanical Chock Indicator","Dual Filter, paper element"
+4,Specification,Exhaust System,Muffler Capacity ,19 L to 30 L,75L,30L,75L
+4,Specification,Fuel Tank,Capacity (L),160,380,160,380
+4,Specification,Fuel Tank,Size,410 x 550 x 845 (HxWxL mm),580 x 1500 (Circular Diax length mm),432x564x830,580 x 1500 (Circular Diax length mm)
+4,Specification,Fuel Tank,Mounted Location ,RHS,RHS,RHS,RHS
+4,Specification,Cab and PT Mount ,Cab Mount ,"4 Point rubber mount, tilt angle 45 deg",4 point mounted Tilting Type,"4 Point rubber mount, tilt angle 45 deg",4 point mounted Tilting Type
+4,Specification,Cab and PT Mount ,Engine Mount,2 Point rubber mount with cross member,2 Point rubber mount with cross member,2 Point rubber mount with cross member,2 Point rubber mount with cross member
