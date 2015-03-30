@@ -61,7 +61,6 @@ $(function () {
     {
       return_data = findIndividualSubCategoryModelDescription(model,aggregate,category,sub_category);
     }
-    console.log(return_data);
     return return_data;
   }
 
@@ -95,7 +94,6 @@ $(function () {
       if(individual_aggregate != null)
       {
         categories = fetchSelectedCategories();
-        console.log(categories);
         $.each(categories, function(k,v){
           var aggregate_data = [];
           $.each(models_for_graph, function(key,value){
@@ -124,7 +122,6 @@ $(function () {
     }
     else
     {
-      console.log(aggregates);
       return aggregates;
     }
   }

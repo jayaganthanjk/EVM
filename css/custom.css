@@ -54,10 +54,10 @@ body{
   background-color:#314241;
 }
 .model-menu{
-  overflow-x:scroll;
+  overflow-x:auto;
 }
 .model-menu-below{
-  overflow-x:scroll;
+  overflow-x:auto;
 }
 .model-display{
   width:235px;
@@ -158,12 +158,15 @@ ul li:nth-child(even){
   position:relative;
 }
 .content-wrapper-box{
-  overflow-y:scroll;
+  overflow-y:hidden;
   height:600px;
   margin-left:20px;
 }
 .content-wrapper{
   height:600px;
+}
+.content-wrapper-total.content-wrapper-box{
+  overflow:auto;
 }
 
 .model-heading{
