@@ -7,8 +7,7 @@
 
  function imageData(data)
  {
-  image_data = data;
-  
+  image_data = data;  
  }
 
   function showLoader()
@@ -111,6 +110,18 @@
     return description_result;
   }
 
+  function findSubCategoryDescription(category,sub_category){
+    description_result = [];
+    $.each(file_data, function(key,value){
+      if( isValid(file_data[key].Category) && isValid(file_data[key].SubCategory))
+      {
+        if(file_data[key].Category == category && file_data[key].SubCategory == sub_category)
+          description_result.push(file_data[key].Description);
+      }
+    })
+    return description_result;
+  }
+
   function findModels(){
     $.each(file_data[1], function(key, element) {
       if(isValid(key) && key.toLowerCase().indexOf("model") != -1)
@@ -135,6 +146,22 @@
     var model_description_array = [];
     $.each(file_data, function(key,value){
       if( (isValid(file_data[key].Category) && file_data[key].Category == category) || (isValid(file_data[key].SubCategory) && file_data[key].SubCategory == category) )
+      {
+        $.each(file_data[key],function(k,e){
+          if(isValid(k) && k == model)
+          {
+            model_description_array.push(e);
+          }
+        })
+      }
+    })
+    return model_description_array;
+  }
+
+  function findSubCategoryModelDescription(model,category,sub_category){
+    var model_description_array = [];
+    $.each(file_data, function(key,value){
+      if( (isValid(file_data[key].Category) && file_data[key].Category == category && isValid(file_data[key].SubCategory) && file_data[key].SubCategory == sub_category) )
       {
         $.each(file_data[key],function(k,e){
           if(isValid(k) && k == model)
@@ -222,7 +249,7 @@
   function fillSubCategoryDescription(category,sub_category){
     var content_html_start = '<li class="list-group-item" data-category="';
     var content_html_end = '</li>';
-    var temp_description  = findDescription(sub_category);
+    var temp_description  = findSubCategoryDescription(category,sub_category);
     //console.log("descriptoin of "+sub_category+" "+temp_description);
     $.each( temp_description , function(key,value)
     {
@@ -243,6 +270,8 @@
       $('#description-menu ul li:nth-last-child(1)').last().addClass("text-bold event-description");
       $this = $('#description-menu ul');
       temp_sub_categories = findSubCategory(category_value);
+      console.log(category_value);
+      console.log(temp_sub_categories);
       if( temp_sub_categories.length > 0 )
       {
         $.each( temp_sub_categories , function(sub_category_key, sub_category_value){
@@ -280,7 +309,7 @@
   {
     var content_html_start = '<li class="list-group-item" data-category="';
     var content_html_end = '</li>';
-    var temp_description  = findModelDescription(model_name, sub_category);
+    var temp_description  = findSubCategoryModelDescription(model_name, category,sub_category);
     //console.log("descriptoin of "+sub_category+" "+temp_description);
     $.each( temp_description , function(key,value)
     {

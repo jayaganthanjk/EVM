@@ -172,8 +172,6 @@ $(document).ready(function(){
       image_data = $.csv.toObjects(image_file_data);
      
       imageData(image_data);
-      var image = findImageName("Basic","Model-8965");
-      //console.log(image);
     };
     //console.log(file);
     reader.readAsText(file);
@@ -234,7 +232,7 @@ $(document).ready(function(){
   $('.category').each(function(){
     var check = $(this).is(':checked');
     var disp_property = findDispProperty(check);
-     var category = $(this).data('category');
+    var category = $(this).data('category');
     var sub_category = $(this).data('sub-category');
     if(!check)
     {
@@ -259,7 +257,7 @@ $(document).ready(function(){
     
     if(typeof sub_category !== 'undefined')
     {
-      $('.event-description[data-sub-category="'+sub_category+'"]').css('display',disp_property);
+      $('.event-description[data-sub-category="'+sub_category+'"][data-category="'+category+'"]').css('display',disp_property);
       
     }
     else
@@ -304,7 +302,7 @@ $(document).ready(function(){
     else
     {
       $('.event-description[data-category="'+category+'"').css('display',disp_property);
-      $('.category[data-category="'+category+'"').prop('checked',check);
+      $('.category[data-category="'+category+'"]').prop('checked',check);
     }
     //fillDiff();
     triggerData();
