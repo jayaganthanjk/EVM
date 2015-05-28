@@ -1,5 +1,6 @@
 $(function () {
 
+  var categories_length = 0;
   function appendChartOption(option_description)
   {
     var option = "<option value=\""+option_description+"\">"+option_description+"</option>";
@@ -87,6 +88,8 @@ $(function () {
   function analyseChartAggregateOptions(models_for_graph)
   {
     var aggregates = [],categories = [];
+    var colors = ["#60BAE8","#60E8A0","#A1E860","#F288D9","#F29888","#A388F2","#E3F288","#B2ECA9","#A9C0EC","#A9ECDC","#ECA9CC"];
+    var i=0;
     var error_flag = 0;
     $('.chart-option').each(function()
     {
@@ -94,6 +97,8 @@ $(function () {
       if(individual_aggregate != null)
       {
         categories = fetchSelectedCategories();
+        categories_length = categories.length;
+        console.log(categories.length);
         $.each(categories, function(k,v){
           var aggregate_data = [];
           $.each(models_for_graph, function(key,value){
@@ -111,11 +116,15 @@ $(function () {
           aggregates.push({
             name: v[1],
             data: aggregate_data,
-            stack: individual_aggregate
+            stack: individual_aggregate,
+            color: colors[i]
           });
+          i++;
+          if(i == categories.length){i=0;}
         })        
       }
     });
+    console.log(aggregates);
     if(error_flag == 1)
     {
       return 0;
@@ -130,10 +139,18 @@ $(function () {
     $('#chart-wrapper').remove();
     $('#chart-wrapper-parent').append('<div id="chart-wrapper"></div>');
 
- $('#chart-wrapper').highcharts({
+    $('#chart-wrapper').highcharts({
 
         chart: {
             type: 'column'
+        },
+
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            floating: false,
+            backgroundColor: '#FFFFFF'
         },
 
         title: {
@@ -184,6 +201,12 @@ $(function () {
 
         series: aggregates
     });
+  //$('g.highcharts-legend-item:gt('+categories_length-1+')').remove();
+  console.log(categories_length);
+  categories_length = parseInt(categories_length) - 1;
+  $('g.highcharts-legend-item:gt('+categories_length+')').remove();
+  console.log($('g.highcharts-legend-item:gt('+categories_length+')'));
+  categories_length = 0;
   }
 
   // Function to display graph based on the analytics
