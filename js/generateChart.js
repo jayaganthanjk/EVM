@@ -165,7 +165,7 @@ $(function () {
             allowDecimals: false,
             min: 0,
             title: {
-                text: 'some'
+                text: ''
             },
             stackLabels: {
                 enabled: true,
