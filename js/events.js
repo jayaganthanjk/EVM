@@ -28,6 +28,12 @@ $(document).ready(function(){
     $('#'+id).remove();        
   });
 
+  //Clear graph start
+  $('#remove-graph').click(function(){
+    $('#chart-wrapper').empty();
+  })
+  //Clear graph end
+
   $(document).on('click','.category-plus',function(){
     console.log("clicked plus");
     var category = $(this).parent().children().first().children().first().data('category');

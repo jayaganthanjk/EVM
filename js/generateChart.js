@@ -233,7 +233,7 @@ $(function () {
         $('text[text-anchor="end"]').remove();
         $('.chart-option').each(function()
         {
-          $(this).find('option:eq(0)').prop('selected', true);          
+          //$(this).find('option:eq(0)').prop('selected', true);          
         })
       }
       hideLoader();
